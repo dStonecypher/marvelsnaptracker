@@ -50,7 +50,12 @@ declare namespace ourActiveWin {
     title: string | undefined;
   }
 
-  type Result = MacOSResult | WindowsResult;
+  interface LinuxResult extends BaseResult {
+    platform: 'linux';
+    title: string | undefined;
+  }
+
+  type Result = MacOSResult | WindowsResult | LinuxResult;
 }
 
 declare const ourActiveWin: {
