@@ -9,6 +9,10 @@ module.exports.sync = () => {
     return require('./lib/windows').sync();
   }
 
+  if (process.platform === 'linux') {
+    return require('./lib/linux').sync();
+  }
+
   throw new Error('macOS and Windows only');
 };
 
