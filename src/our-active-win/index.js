@@ -10,6 +10,7 @@ module.exports.sync = () => {
   }
 
   if (process.platform === 'linux') {
+    console.log("Linux Platform");
     return require('./lib/linux').sync();
   }
 
