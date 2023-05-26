@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports.sync = () => {
+  console.log(process.platform);
   if (process.platform === 'darwin') {
     return require('./lib/macos').sync();
   }
